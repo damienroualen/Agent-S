@@ -28,6 +28,29 @@
    pip install -e .
    ```
 
+## Setting up Perplexica
+
+1. **Navigate to Perplexica directory:**
+   ```bash
+   cd Perplexica
+   ```
+
+2. **Start Perplexica containers:**
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Export Perplexica URL:**
+   ```bash
+   export PERPLEXICA_URL=http://localhost:3000/api/search
+   ```
+
+4. **To restart after config changes:**
+   ```bash
+   docker-compose down
+   docker-compose up --build -d
+   ```
+
 ## Running Agent-S2
 
 1. **Activate the virtual environment:**
@@ -67,4 +90,5 @@ Agent-S2 is a multimodal AI agent that can:
 
 - Make sure you have the required permissions for GUI automation
 - On macOS, you may need to grant accessibility permissions
-- Ensure your OpenAI API key has sufficient credits for GPT-4o usage 
+- Ensure your OpenAI API key has sufficient credits for GPT-4o usage
+- If Perplexica containers fail to start, check Docker is running and ports are available 
